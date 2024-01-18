@@ -1,25 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
 .wrapper{
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    perspective: 100px;
-    background-color: green;
+    perspective: 10px;
 }
 
 .container{
     position:relative;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     transform-style: preserve-3d;
     z-index: -1;
-    
+   
+}
+
+.background{
+    transform: translateZ(-40px)scale(5) ;
+}
+
+.foreground{
+    transform: translateZ(-20px)scale(3) ;
 }
 .background, .foreground{
     position: absolute;
     height: 100%;  
     width: 100%;
     z-index: -1; 
+}
+
+h1{
+    position:absolute;
+    top:5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color:white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7); 
 }
